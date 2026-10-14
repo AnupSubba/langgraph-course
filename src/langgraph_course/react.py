@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
-@Tool
+@tool
 def triple(num:float) -> float:
     """
     param num: a number to triple
