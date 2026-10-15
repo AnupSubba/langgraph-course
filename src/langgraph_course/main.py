@@ -1,11 +1,8 @@
 from httpcore import __name
 from langgraph.constants import END
-from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
-from langgraph.graph import MessagesState, StateGraph
+from langgraph.graph import StateGraph
 from langgraph_course.nodes import run_agent_reasoning, tool_node
-
-load_dotenv()
 
 AGENT_REASON = "agent_reason"
 ACT = "act"
