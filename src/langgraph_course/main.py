@@ -1,7 +1,7 @@
 from httpcore import __name
 from langgraph.constants import END
 from langchain_core.messages import HumanMessage
-from langgraph.graph import StateGraph
+from langgraph.graph import MessagesState, StateGraph
 from langgraph_course.nodes import run_agent_reasoning, tool_node
 
 AGENT_REASON = "agent_reason"
@@ -31,5 +31,5 @@ workflow.get_graph().draw_mermaid_png(output_file_path="graph.png")
 
 if __name__ == '__main__':
     print('Hello ReAct LangGraph with function Calling')
-    res = workflow.invoke({"messages": [HumanMessage(content="What is the temperature of Delhi? List it and triple it")]})  
+    res = workflow.invoke({"messages": [HumanMessage(content="What is the temperature of Delhi? List it and tripleeeeeee it, and also ")]})  
     print("messages: ", res["messages"][LAST].content) 
